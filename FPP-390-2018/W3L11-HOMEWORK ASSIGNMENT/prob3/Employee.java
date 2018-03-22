@@ -33,6 +33,15 @@ public class Employee {
 		Employee e = (Employee) obj;
 		return this.name.equals(e.name) && this.salary==e.salary;
 		
-	}	
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + salary;
+		return result;
+	}
+
 	
 }
